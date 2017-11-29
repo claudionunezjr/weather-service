@@ -1,0 +1,32 @@
+{
+  "name": "WeatherService",
+  "version": "1.0.0",
+  "description": "This web service will serve up last weeks weather based on a given location using longitude & latitude.",
+  "main": "app.js",
+  "scripts": {
+    "deploy": "gcloud app deploy",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": ">=4.3.2"
+  },
+  "author": "Claudio Nuñez Jr.",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "@google-cloud/nodejs-repo-tools": "1.4.17"
+  },
+  "cloud-repo-tools": {
+    "test": {
+      "app": {
+        "msg": "Hello, world!"
+      }
+    },
+    "requiresKeyFile": true,
+    "requiresProjectId": true
+  }
+}
